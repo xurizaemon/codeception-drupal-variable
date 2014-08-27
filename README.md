@@ -51,12 +51,22 @@ modules:
 
 ##Bootstrapped
 
+```yaml
+DrupalVariable:
+  class: Codeception\Module\Drupal\Variable\VariableStorage\Bootstrapped
+```
+
 Required config variables:
 
 * 'drupal_root'. This is the path the local instance of the drupal site you wish to set/get variables on.
   * e.g. `/home/sites/www.example.com`
 
 ##Direct connection
+
+```yaml
+DrupalVariable:
+  class: Codeception\Module\Drupal\Variable\VariableStorage\DirectConnection
+```
 
 Required config variables:
 
@@ -66,6 +76,11 @@ Required config variables:
 * password - the db password
 
 ##Drush
+
+```yaml
+DrupalVariable:
+  class: Codeception\Module\Drupal\Variable\VariableStorage\Drush
+```
 
 Required config variables:
 
