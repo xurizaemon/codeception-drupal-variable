@@ -14,6 +14,9 @@ class Drush implements StorageInterface
      *
      * @param array $config
      *   The module config.
+     *
+     * @throws ModuleConfig
+     *   If drush_alias not set in module config.
      */
     public function __construct($config)
     {
@@ -38,11 +41,11 @@ class Drush implements StorageInterface
     public function writeVariable($name, $value)
     {
         $this->execDrush(
-          sprintf(
-            "vset --format=json %s %s",
-            escapeshellarg($name),
-            escapeshellarg(json_encode($value))
-          )
+            sprintf(
+                "vset --format=json %s %s",
+                escapeshellarg($name),
+                escapeshellarg(json_encode($value))
+            )
         );
     }
 

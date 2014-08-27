@@ -63,6 +63,9 @@ class DirectConnection implements StorageInterface
      * @param string $name
      *   The variable name.
      *
+     * @param mixed $default
+     *   The default if variable not found.
+     *
      * @return bool|mixed
      *   false on failure, the variable on success.
      */
@@ -99,7 +102,8 @@ class DirectConnection implements StorageInterface
      * @return array
      *   Array of required field names.
      */
-    public static function getRequiredFields() {
-      return array('dsn', 'user', 'password');
+    public static function getRequiredFields()
+    {
+        return array('dsn', 'user', 'password');
     }
 }

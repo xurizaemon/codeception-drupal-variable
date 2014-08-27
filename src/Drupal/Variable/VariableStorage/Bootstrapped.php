@@ -23,7 +23,7 @@ class Bootstrapped implements StorageInterface
         }
 
         if (empty($this->config['drupal_root']) || !file_exists($this->config['drupal_root'])) {
-            throw new \Codeception\Exception\ModuleConfig("VariableStorageBootstrapped", "drupal_root not set.");
+            throw new Codeception\Exception\ModuleConfig("VariableStorageBootstrapped", "drupal_root not set.");
         }
 
         $thisdir = getcwd();
