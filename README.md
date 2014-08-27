@@ -1,6 +1,24 @@
 #Drupal Variable
 
-Codeception module to allow testing of drupal variables. There are three ways of accessing the variable values.
+Codeception module to allow testing of drupal variables.
+
+e.g.
+
+```php
+// Assert that the target site has variable "clean_url" set to 1
+$I->seeVariable("clean_url", 1);
+
+// Set a variable.
+$I->haveVariable("clean_url", 0);
+
+// Delete a variable.
+$I->dontHaveVariable("clean_url");
+
+// Retrieve a variable value.
+$value = $I->getVariable("clean_url");
+```
+
+There are three ways of accessing the variable values.
 
 * Bootstrapped - bootstrap the locally installed drupal instance and use variable_get/set().
 * DirectConnection - use PDO to query the database directly.
