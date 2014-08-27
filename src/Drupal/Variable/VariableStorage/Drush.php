@@ -60,14 +60,17 @@ class Drush implements StorageInterface
     public function readVariable($name, $default = null)
     {
         $serialized = $this->execDrush("vget --format=php --exact " . escapeshellarg($name) . " 2>/dev/null");
-
-        // Loop through returned lines, until we can unserialize something.
-        // This skips any SSH warnings, e.g.
+        // Skip any SSH warnings, e.g.
         // Warning: Permanently added 'X.X.X.X' (RSA) to the list of known hosts.
-        foreach (explode("\n", $serialized) as $line) {
-            if ($line == serialize(false) || ($val = @unserialize($line)) !== false) {
-                return $val[$name];
-            }
+        // TODO: how to improve this?
+        $lines = explode("\n", $serialized);
+        if (strpos($lines[0], "Warning:") === 0) {
+            array_shift($lines);
+            $serialized = implode("\n", $lines);
+        }
+
+        if ($serialized == serialize(false) || ($val = @unserialize($serialized)) !== false) {
+            return $val[$name];
         }
 
         return $default;
