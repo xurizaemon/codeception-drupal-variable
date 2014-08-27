@@ -1,6 +1,6 @@
 <?php
 
-namespace Codeception\Module\DrupalVariable\VariableStorage;
+namespace Codeception\Module\Drupal\Variable\VariableStorage;
 
 /**
  * Read/Write variables to/from a drupal db directly. Requires mysql connection.
@@ -23,10 +23,6 @@ class DirectConnection implements StorageInterface
     public function __construct($config)
     {
         $this->config = $config;
-
-        if (empty($this->config['dsn'])) {
-          throw new \InvalidArgumentException("Config for DirectConnection should contain dsn.");
-        }
     }
 
     /**
@@ -95,5 +91,15 @@ class DirectConnection implements StorageInterface
         $this->getDbh()->prepare("delete from variable where name = :name")->execute(array(
               ":name" => $name,
         ));
+    }
+
+    /**
+     * Return array of required fields.
+     *
+     * @return array
+     *   Array of required field names.
+     */
+    public static function getRequiredFields() {
+      return array('dsn', 'user', 'password');
     }
 }

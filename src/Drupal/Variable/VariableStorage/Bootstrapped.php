@@ -1,6 +1,6 @@
 <?php
 
-namespace Codeception\Module\DrupalVariable\VariableStorage;
+namespace Codeception\Module\Drupal\Variable\VariableStorage;
 
 /**
  * Read/Write variables using a bootrapped drupal instance.
@@ -78,5 +78,13 @@ class Bootstrapped implements StorageInterface
     public function deleteVariable($name)
     {
         return variable_del($name);
+    }
+
+    /**
+     * @return array
+     */
+    public static function getRequiredFields()
+    {
+        return array("drupal_root");
     }
 }
