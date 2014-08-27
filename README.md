@@ -46,7 +46,7 @@ Add 'DrupalVariable' module to the suite configuration.
 class_name: AcceptanceTester
 modules:
     enabled:
-        - AcceptanceHelper
+        - DrupalVariable
 ```
 
 ##Bootstrapped
