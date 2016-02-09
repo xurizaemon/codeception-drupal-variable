@@ -51,10 +51,11 @@ class DrupalVariable extends \Codeception\Module
             );
         }
 
-        if (!$class instanceof StorageInterface) {
+        $interface = "Codeception\\Module\\Drupal\\Variable\\VariableStorage\\StorageInterface";
+        if (!in_array($interface, class_implements($class))) {
             throw new \Codeception\Exception\ModuleConfig(
                 "DrupalVariable",
-                "Invalid config. Class '$class' must implement Codeception\\Module\\Drupal\\Variable\\VariableStorage\\StorageInterface"
+                "Invalid config. Class '$class' must implement '$interface'"
             );
         }
     }
