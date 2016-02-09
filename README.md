@@ -35,7 +35,7 @@ Install using composer, using git repository (for now).
           "url": "https://github.com/ixis/codeception-drupal-variable.git"
       },
 "require": {
-     "ixisandyr/codeception-drupal-variable": "~0.3",
+     "ixis/codeception-drupal-variable": "~0.3",
    },
 ```
 #Configure
