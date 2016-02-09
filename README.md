@@ -32,10 +32,10 @@ Install using composer, using git repository (for now).
 "repositories": [
       {
           "type": "vcs",
-          "url": "git@bitbucket.org:dopey/codeception-drupal-variable.git"
+          "url": "https://github.com/ixis/codeception-drupal-variable.git"
       },
 "require": {
-     "ixisandyr/codeception-drupal-variable": "@dev",
+     "ixisandyr/codeception-drupal-variable": "~0.3",
    },
 ```
 #Configure
