@@ -1,7 +1,7 @@
 <?php
 namespace Codeception\Module;
 
-use Codeception\Module\DrupalVariable\VariableStorage\StorageInterface;
+use Codeception\Module\Drupal\Variable\VariableStorage\StorageInterface;
 use Codeception\TestCase;
 
 class DrupalVariable extends \Codeception\Module

@@ -1,6 +1,6 @@
 {
-  "name": "ixisandyr/codeception-drupal-variable",
-  "description": "A Codeception module to allow drush commands to be run during tests.",
+  "name": "ixis/codeception-drupal-variable",
+  "description": "A Codeception module to allow Drupal drush commands to be run during tests",
   "authors": [
     {
       "name": "Andy Rigby",
@@ -13,6 +13,6 @@
     }
   },
   "requires": {
-      "codeception/codeception": "2.0.*"
+      "codeception/codeception": "~2.0"
   }
 }
