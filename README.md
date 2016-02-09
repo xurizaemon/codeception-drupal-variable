@@ -29,14 +29,9 @@ There are three ways of accessing the variable values.
 Install using composer, using git repository (for now).
 
 ```
-"repositories": [
-      {
-          "type": "vcs",
-          "url": "https://github.com/ixis/codeception-drupal-variable.git"
-      },
 "require": {
-     "ixis/codeception-drupal-variable": "~0.3",
-   },
+    "ixis/codeception-drupal-variable": "~0.3"
+}
 ```
 #Configure
 
