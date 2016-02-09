@@ -1,7 +1,7 @@
 <?php
 namespace Codeception\Module;
 
-use Codeception\Module\DrupalVariable\VariableStorage\StorageInterface;
+use Codeception\Module\Drupal\Variable\VariableStorage\StorageInterface;
 use Codeception\TestCase;
 
 class DrupalVariable extends \Codeception\Module
@@ -51,11 +51,10 @@ class DrupalVariable extends \Codeception\Module
             );
         }
 
-        $interface = "Codeception\\Module\\Drupal\\Variable\\VariableStorage\\StorageInterface";
-        if (!in_array($interface, class_implements($class))) {
+        if (!$class instanceof StorageInterface) {
             throw new \Codeception\Exception\ModuleConfig(
                 "DrupalVariable",
-                "Invalid config. Class '$class' must implement '$interface'"
+                "Invalid config. Class '$class' must implement Codeception\\Module\\Drupal\\Variable\\VariableStorage\\StorageInterface"
             );
         }
     }
