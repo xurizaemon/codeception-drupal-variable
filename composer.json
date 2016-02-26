@@ -1,6 +1,6 @@
 {
   "name": "ixis/codeception-drupal-variable",
-  "description": "A Codeception module to allow Drupal drush commands to be run during tests",
+  "description": "A Codeception module to allow Drupal variables to be tested and set during tests",
   "homepage": "https://github.com/ixis/codeception-drupal-variable",
   "license": "MIT",
   "authors": [
