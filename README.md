@@ -53,10 +53,10 @@ DrupalVariable:
 
 Required config variables:
 
-* 'drupal_root'. This is the path the local instance of the drupal site you wish to set/get variables on.
+* `drupal_root`. This is the path the local instance of the drupal site you wish to set/get variables on.
   * e.g. `/home/sites/www.example.com`
 
-##Direct connection
+##Direct connection to database
 
 ```yaml
 DrupalVariable:
@@ -65,10 +65,10 @@ DrupalVariable:
 
 Required config variables:
 
-* dsn - dsn to the instance of the drupal site db.
+* `dsn` - dsn to the instance of the drupal site db.
   * e.g. `mysql:host=localhost;dbname=drupal`
-* user - the db user
-* password - the db password
+* `user` - the db user
+* `password` - the db password
 
 ##Drush
 
@@ -79,5 +79,5 @@ DrupalVariable:
 
 Required config variables:
 
-* drush_alias - the drush alias to the site under test.
+* `drush_alias` - the drush alias to the site under test.
   * e.g. `@mysite.local`
