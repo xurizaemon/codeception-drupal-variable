@@ -62,7 +62,7 @@ class Drush implements StorageInterface
      */
     public function readVariable($name, $default = null)
     {
-        $serialized = $this->execDrush("vget --format=php --exact " . escapeshellarg($name) . " 2>/dev/null");
+        $serialized = $this->execDrush("vget --format=php --exact --pipe " . escapeshellarg($name) . " 2>/dev/null");
         // Skip any SSH warnings, e.g.
         // Warning: Permanently added 'X.X.X.X' (RSA) to the list of known hosts.
         // TODO: how to improve this?
