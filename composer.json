@@ -1,5 +1,5 @@
 {
-  "name": "ixis/codeception-drupal-variable",
+  "name": "fuzionnz/codeception-drupal-variable",
   "description": "A Codeception module to allow Drupal variables to be tested and set during tests",
   "homepage": "https://github.com/ixis/codeception-drupal-variable",
   "license": "MIT",
