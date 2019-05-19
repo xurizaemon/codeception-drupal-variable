@@ -1,7 +1,7 @@
 {
-  "name": "fuzionnz/codeception-drupal-variable",
+  "name": "xurizaemon/codeception-drupal-variable",
   "description": "A Codeception module to allow Drupal variables to be tested and set during tests",
-  "homepage": "https://github.com/ixis/codeception-drupal-variable",
+  "homepage": "https://github.com/xurizaemon/codeception-drupal-variable",
   "license": "MIT",
   "authors": [
     {
@@ -15,6 +15,6 @@
     }
   },
   "requires": {
-      "codeception/codeception": "~2.2"
+      "codeception/codeception": "~3"
   }
 }
